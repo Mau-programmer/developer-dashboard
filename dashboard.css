@@ -1,0 +1,164 @@
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+        * {
+            box-sizing: border-box
+        }
+
+        .incorrect {
+            background-color: #db2828;
+        }
+
+        #todoContainer,
+        #completedContainer {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr auto;
+            height: min-content;
+        }
+
+        #todoUl,
+        #completedUl {
+            display: flex;
+            overflow-x: scroll;
+            gap: 0.5rem;
+            height: 45vh;
+            padding: 1rem;
+        }
+
+        #todoContainer h3,
+        #completedContainer h3 {
+            margin-bottom: 0;
+        }
+
+        body {
+            font-family: 'Roboto mono', monospace;
+            overflow-x: hidden;
+            font-size: 2rem;
+        }
+
+        #todoUl li,
+        #completedUl li {
+            display: grid;
+            grid-template-rows: auto 1fr 3fr 1fr;
+            gap: 1rem;
+        }
+
+        #todosContainer.show {
+            display: block;
+            padding: 0.25rem;
+        }
+
+        #goalContainer.show {
+            display: grid;
+            grid-template-rows: 7fr 2fr;
+            height: min-content;
+        }
+
+        #todosContainer {
+            display: none;
+        }
+
+        #goalContainer {
+            display: none;
+            height: 40vh;
+        }
+
+        #goalMenu {
+            display: none;
+            padding: 1rem;
+            max-width: 50vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #444;
+            border-radius: 1rem;
+            box-shadow: 1px 1px 0 #444;
+        }
+
+        #goalMenu input,
+        #goalMenu button {
+            border: 1px solid #444;
+            padding: 0.25rem;
+            border-radius: 5rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'roboto slab', serif;
+        }
+
+        #goal {
+            font-size: 3em;
+            text-align: center;
+        }
+
+        button {
+            background-color: #a5b9e8;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #444;
+            box-shadow: 1px 1px 0 #444;
+            transition: all 0.25s;
+        }
+
+        button:hover {
+            transform: scale(105%);
+            background-color: #859ac6;
+            color: white;
+        }
+
+        #goalMenu.show {
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: column;
+            font-size: 3em;
+            background-color: #ddd;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-family: 'roboto slab', serif;
+        }
+
+        #menu {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .inpgroup {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 1rem;
+            position: sticky;
+            bottom: 1rem;
+        }
+
+        .inpgroup input {
+            border-radius: 0.5rem;
+
+        }
+
+        input,
+        select,
+        textarea {
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #444;
+            box-shadow: 1px 1px 0 #444;
+        }
+
+        #aboutContainer {
+            display: none;
+        }
+
+        #aboutContainer.show {
+            display: block;
+        }
